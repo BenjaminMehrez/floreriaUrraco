@@ -7,7 +7,7 @@ function BestFlowers() {
             <h1 className="text-3xl font-medium title-font text-white mb-2">
               Ramos Destacados
             </h1>
-            <div className="mx-auto w-full h-1 bg-pink-500 mb-4" />
+            <div className="mx-auto w-1/4 h-1 bg-pink-500 mb-4" />
           </div>
           <p className="mt-2 text-lg text-gray-100">
             Elegimos los ramos más bellos y delicados para sorprender en cada

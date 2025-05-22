@@ -6,10 +6,10 @@ function DoOrder() {
     <div className="px-8">
       <div className="flex flex-col items-center w-full mt-20">
         <div>
-          <h1 className="text-3xl font-medium title-font text-gray-800 mb-2">
+          <h1 className="text-3xl text-center font-medium title-font text-gray-800 mb-2">
             ¿Como hacer tu pedido en Floreria Madison?
           </h1>
-          <div className="mx-auto w-full h-1 bg-pink-500 mb-4" />
+          <div className="mx-auto w-1/5 h-1 bg-pink-500 mb-4" />
         </div>
       </div>
       <section className="text-gray-600 body-font">
@@ -66,7 +66,7 @@ function DoOrder() {
               3
             </div>
             <div className="flex-grow md:pl-8 pl-6 flex sm:items-center items-start flex-col sm:flex-row">
-              <div className="flex-shrink-0 w-24 h-24 bg-pink-100 text-pink-500 rounded-full inline-flex items-center justify-center">
+              <div className="flex-shrink-0 w-20 sm:w-24 h-20 sm:h-24 bg-pink-100 text-pink-500 rounded-full inline-flex items-center justify-center">
                 <PackageCheckIcon className="w-10 h-10 sm:w-12 sm:h-12" />
               </div>
               <div className="flex-grow sm:pl-6 mt-6 sm:mt-0">
