@@ -1,4 +1,7 @@
 @import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
 @plugin "daisyui" {
   themes: light --default;
 }
@@ -8,7 +11,7 @@ body{
 }
 
 .banner {
-  min-height: 100dvh;
+  min-height: 75vh;
   background-size: cover;
   background-position: center;
   background-image: linear-gradient(0deg,
