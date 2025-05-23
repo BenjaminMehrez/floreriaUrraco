@@ -1,20 +1,22 @@
 import { Link } from "react-router-dom";
-import { Resend } from "resend";
 
 function Contact() {
 
-  const resend = new Resend(import.meta.env.VITE_EMAIL_API_KEY);
-  
-  const sendEmail = () => {
-    // e.preventDefault();
-    resend.emails.send({
-      from: "onboarding@resend.dev",
-      to: "benjaminjofre01@gmail.com",
-      subject: "Hello World",
-      html: "<p>Congrats on sending your <strong>first email</strong>!</p>",
+  const sendEmail = async () => {
+    const res = await fetch("/.netlify/functions/sendEmail", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        to: "benjaminjofre01@gmail.com",
+        subject: "Correo desde Netlify",
+        html: "<p>¡Hola desde una función serverless de Netlify! 🎉</p>",
+      }),
     });
-    console.log("email sent");
+
+    const data = await res.json();
+    console.log(data);
   };
+  
 
   return (
     <section className="text-gray-600 body-font relative">
