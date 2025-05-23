@@ -93,8 +93,8 @@ button {
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  width: 45px;
-  height: 45px;
+  width: 55px;
+  height: 55px;
   border: none;
   border-radius: 50%;
   cursor: pointer;
@@ -160,8 +160,6 @@ button {
 
 @media (min-width: 600px) {
   .Btn {
-    width: 55px;
-    height: 55px;
     bottom: 35px;
     right: 60px;
   }
