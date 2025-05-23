@@ -1,3 +1,4 @@
+import Contact from "@/components/Contact";
 import Banner from "../components/Banner"
 import BestFlowers from "../components/BestFlowers";
 import DoOrder from "../components/DoOrder";
@@ -9,6 +10,7 @@ function Home() {
       <Banner />
       <DoOrder />
       <BestFlowers />
+      <Contact />
       <Footer />
     </>
   );

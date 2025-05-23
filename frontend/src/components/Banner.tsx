@@ -2,7 +2,7 @@ function Banner() {
   return (
     <section className="banner flex justify-center">
       <header className="absolute top-8 left-8 sm:left-10 text-white">
-        <h2 className="font-semibold text-xl sm:text-2xl">Floreria Madison</h2>
+        <h2 className="font-semibold text-xl sm:text-2xl">Floreria <span className="text-pink-500">Madison</span></h2>
       </header>
       <div className="max-w-5xl mx-auto text-white flex flex-col items-center justify-center gap-4 px-5">
         <h3 className="mt-10 text-sm sm:text-lg font-medium">
