@@ -1,6 +1,21 @@
 import { Link } from "react-router-dom";
+import { Resend } from "resend";
 
 function Contact() {
+
+  const resend = new Resend(import.meta.env.VITE_EMAIL_API_KEY);
+  
+  const sendEmail = () => {
+    // e.preventDefault();
+    resend.emails.send({
+      from: "onboarding@resend.dev",
+      to: "benjaminjofre01@gmail.com",
+      subject: "Hello World",
+      html: "<p>Congrats on sending your <strong>first email</strong>!</p>",
+    });
+    console.log("email sent");
+  };
+
   return (
     <section className="text-gray-600 body-font relative">
       <div className="container px-5 py-24 pb-30 mx-auto flex sm:flex-nowrap flex-wrap">
@@ -87,7 +102,7 @@ function Contact() {
               className="w-full bg-white rounded border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 h-32 text-base outline-none text-gray-700 py-1 px-3 resize-none leading-6 transition-colors duration-200 ease-in-out"
             ></textarea>
           </div>
-          <button>
+          <button onClick={sendEmail}>
             <div className="btn2">
               <span className="spn2">Enviar mensaje</span>
             </div>
