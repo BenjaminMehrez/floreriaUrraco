@@ -2,7 +2,9 @@ function Banner() {
   return (
     <section className="banner flex justify-center">
       <header className="absolute top-8 left-8 sm:left-10 text-white">
-        <h2 className="font-semibold text-xl sm:text-2xl">Floreria <span className="text-pink-500">Madison</span></h2>
+        <h2 className="font-semibold text-xl sm:text-2xl">
+          Floreria <span className="color-primary">Madison</span>
+        </h2>
       </header>
       <div className="max-w-5xl mx-auto text-white flex flex-col items-center justify-center gap-4 px-5">
         <h3 className="mt-10 text-sm sm:text-lg font-medium">
@@ -17,8 +19,13 @@ function Banner() {
           para cada momento y ocasión.
         </p>
         <button className="relative inline-flex h-12 active:scale-95 transistion overflow-hidden rounded-lg p-[1px] focus:outline-none">
-          <span className="absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#e7029a_0%,#f472b6_50%,#bd5fff_100%)]"></span>
-          <a href="#contact" className="inline-flex h-full w-full cursor-pointer items-center justify-center rounded-lg px-7 text-md font-bold text-white backdrop-blur-3xl gap-2 undefined">
+          <span
+            className="absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#FEAE79_0%,#e58d4a_50%,#c96b2e_100%)]"
+          ></span>
+          <a
+            href="#contact"
+            className="inline-flex h-full w-full cursor-pointer items-center justify-center rounded-lg px-7 text-md font-bold text-white backdrop-blur-3xl gap-2 undefined"
+          >
             CONTACTANOS
             <svg
               stroke="currentColor"

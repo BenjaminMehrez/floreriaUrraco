@@ -9,6 +9,18 @@ body{
   font-family: 'Lora', serif;
 }
 
+.color-primary {
+  color: #FEAE79;
+}
+
+.bg-second {
+  background-color: #180000;
+}
+
+.bg-primary {
+  background-color: #FEAE79;
+}
+
 .banner {
   min-height: 75vh;
   background-size: cover;

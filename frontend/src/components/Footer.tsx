@@ -1,6 +1,6 @@
 function Footer() {
   return (
-    <footer className="bg-pink-950">
+    <footer className="bg-second">
       <div className="mx-auto max-w-screen-xl px-4 py-8 sm:px-6 lg:px-8">
         <div className="sm:flex sm:items-center sm:justify-between">
           <div className="flex gap-1 items-center justify-center text-xl text-white sm:justify-start">
