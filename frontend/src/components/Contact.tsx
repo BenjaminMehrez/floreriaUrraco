@@ -30,7 +30,7 @@ function Contact() {
         style="max-width: 600px; margin: auto; background-color: #ffffff; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
         <tr>
           <td style="padding: 30px 20px 10px; text-align: center; background-color: #f3e9e5;">
-            <img src="https://floreria-urraco.netlify.app/florero.png" alt="Logo de Florería"
+            <img src="https://floreria-urraco.netlify.app/ramo.png" alt="Logo de Florería"
               style="max-width: 160px; margin-bottom: 10px;" />
           </td>
         </tr>

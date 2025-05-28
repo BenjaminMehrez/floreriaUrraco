@@ -93,13 +93,6 @@ body{
   z-index: 3;
 }
 
-button {
-  text-decoration: none;
-  border: none;
-  background-color: transparent;
-}
-
-
 /* From Uiverse.io by Gaurang7717 */
 .Btn {
   display: flex;
