@@ -11,14 +11,14 @@ function Testimonials() {
                 src="https://randomuser.me/api/portraits/women/79.jpg"
               />
               <p className="leading-relaxed">
-                El lugar es un verdader vergel, tiene mucha variedad de plantas
-                y macetas, de plástico, artesanales, decorativas, además es
-                atendido con esmero por su dueño y sus colaboradores que saben
-                mucho y explican con dedicación.
+                Siempre que paso por la florería me atienden con una sonrisa. Te
+                ayudan a elegir sin apurarte y los arreglos que hacen son una
+                belleza. Se nota que trabajan con amor. Es mi lugar de confianza
+                cuando quiero regalar algo especial.
               </p>
               <span className="inline-block h-1 w-10 rounded bg-primary mt-6 mb-4"></span>
               <h2 className="text-gray-900 font-medium title-font tracking-wider text-lg">
-                Estela Suarez
+                Laura C.
               </h2>
             </div>
           </div>
@@ -30,14 +30,14 @@ function Testimonials() {
                 src="https://randomuser.me/api/portraits/men/36.jpg"
               />
               <p className="leading-relaxed">
-                Muy lindo vivero ubicado en Godoy Cruz, tiene mucha variedad de
-                plantas de exterior como de interior, suculentas, macetas, todo
-                dentro de precios accesibles para el tamaño de las plantas. Buen
-                asesoramiento y recomendaciones.
+                Entré sin saber qué llevar y salí con un ramo espectacular. Me
+                escucharon, me aconsejaron y armaron todo en el momento. El
+                local tiene un aroma increíble y se respira tranquilidad.
+                Volvería sin dudar.
               </p>
               <span className="inline-block h-1 w-10 rounded bg-primary mt-6 mb-4"></span>
               <h2 className="text-gray-900 font-medium title-font tracking-wider text-lg">
-                Emiliano Romeo
+                Marcelo F.
               </h2>
             </div>
           </div>
@@ -49,14 +49,14 @@ function Testimonials() {
                 src="https://randomuser.me/api/portraits/women/11.jpg"
               />
               <p className="leading-relaxed">
-                En realidad fuimos por pasta cicatrisante (luego de poda) y nos
-                parecio FANTASTICO!!! Me enamore de la variedad y belleza de las
-                plantas que tienen ademas de infinidad de cosas. Nos atendieron
-                y asesoraron con muchisima amabilidad!!!
+                Fuimos a buscar flores para nuestro civil y quedamos encantados.
+                Nos atendieron como si fuéramos parte de la familia. Nos
+                ayudaron a combinar los colores y todo quedó soñado. Mil gracias
+                por tanto cariño y dedicación.
               </p>
               <span className="inline-block h-1 w-10 rounded bg-primary mt-6 mb-4"></span>
               <h2 className="text-gray-900 font-medium title-font tracking-wider text-lg">
-                Mabel Zelaya
+                Julia y Andrés
               </h2>
             </div>
           </div>

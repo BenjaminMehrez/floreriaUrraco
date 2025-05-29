@@ -47,9 +47,9 @@ function Flowers() {
             className="flex justify-center flex-wrap gap-10 w-full mb-5"
           >
             {(flowersByCategory as { [key: string]: any })[activeCategory]?.map(
-              (flower: any) => (
+              (flower: any, i: number) => (
                 <motion.div
-                  key={flower.id}
+                  key={i}
                   className={`group relative bg-cover bg-center h-[400px] w-[280px] rounded-lg`}
                   initial={{ opacity: 0, scale: 0.9 }}
                   animate={{ opacity: 1, scale: 1 }}
