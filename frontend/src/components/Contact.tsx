@@ -77,7 +77,7 @@ function Contact() {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
-          to: "benjaminjofre01@gmail.com",
+          to: "floreriamadison@gmail.com",
           subject: "Nuevo mensaje de Floreria Madison",
           html: email_html_content,
         }),
