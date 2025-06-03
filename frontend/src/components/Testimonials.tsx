@@ -11,10 +11,7 @@ function Testimonials() {
                 src="https://randomuser.me/api/portraits/women/79.jpg"
               />
               <p className="leading-relaxed">
-                Siempre que paso por la florería me atienden con una sonrisa. Te
-                ayudan a elegir sin apurarte y los arreglos que hacen son una
-                belleza. Se nota que trabajan con amor. Es mi lugar de confianza
-                cuando quiero regalar algo especial.
+                Necesitaba un ramo para un velorio con muy poco tiempo y me salvaron. Me atendieron súper bien por WhatsApp, entendieron lo que buscaba y lo entregaron a tiempo. Muy agradecida.
               </p>
               <span className="inline-block h-1 w-10 rounded bg-primary mt-6 mb-4"></span>
               <h2 className="text-gray-900 font-medium title-font tracking-wider text-lg">
@@ -30,10 +27,7 @@ function Testimonials() {
                 src="https://randomuser.me/api/portraits/men/36.jpg"
               />
               <p className="leading-relaxed">
-                Entré sin saber qué llevar y salí con un ramo espectacular. Me
-                escucharon, me aconsejaron y armaron todo en el momento. El
-                local tiene un aroma increíble y se respira tranquilidad.
-                Volvería sin dudar.
+                Le mandé flores a mi novia por sorpresa y quedó encantada. El ramo era justo como en la foto y venía con una tarjetita hermosa. Me ayudaron a elegir y se notó el detalle en todo.
               </p>
               <span className="inline-block h-1 w-10 rounded bg-primary mt-6 mb-4"></span>
               <h2 className="text-gray-900 font-medium title-font tracking-wider text-lg">
@@ -49,10 +43,7 @@ function Testimonials() {
                 src="https://randomuser.me/api/portraits/women/11.jpg"
               />
               <p className="leading-relaxed">
-                Fuimos a buscar flores para nuestro civil y quedamos encantados.
-                Nos atendieron como si fuéramos parte de la familia. Nos
-                ayudaron a combinar los colores y todo quedó soñado. Mil gracias
-                por tanto cariño y dedicación.
+                Contratamos la florería para nuestro boda y quedó todo soñado. Desde el ramo de novia hasta los centros de mesa, todo impecable. Súper profesionales y atentos a cada detalle.
               </p>
               <span className="inline-block h-1 w-10 rounded bg-primary mt-6 mb-4"></span>
               <h2 className="text-gray-900 font-medium title-font tracking-wider text-lg">
