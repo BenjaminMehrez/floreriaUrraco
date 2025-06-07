@@ -1,16 +1,23 @@
+import { Instagram } from "lucide-react";
+
 function Footer() {
   return (
-    <footer className="bg-second">
-      <div className="mx-auto max-w-screen-xl px-4 py-8 sm:px-6 lg:px-8">
-        <div className="sm:flex sm:items-center sm:justify-between">
-          <div className="flex gap-1 items-center justify-center text-xl text-white sm:justify-start">
-            <img src="/ramo.png" alt="ramo" className="w-12"/>
-            <span>Floreria Madison</span>
-          </div>
-          <p className="mt-4 text-center text-sm text-white lg:mt-0 lg:text-right">
-            Copyright &copy; 2025. Todos los derechos reservados.
+    <footer className="footer bg-second text-neutral-content p-10">
+      <div className="max-w-7xl w-full mx-auto flex flex-col gap-10 sm:flex-row sm:gap-0 justify-between">
+        <aside>
+          <img src="/ramo.png" alt="logo" className="w-20"/>
+          <p>
+            Floreria Madison.
           </p>
-        </div>
+        </aside>
+        <nav>
+          <h6 className="footer-title">Instagram</h6>
+          <div className="grid grid-flow-col gap-4">
+            <a href="https://www.instagram.com/">
+              <Instagram />
+            </a>
+          </div>
+        </nav>
       </div>
     </footer>
   );

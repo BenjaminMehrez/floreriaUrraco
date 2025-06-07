@@ -24,7 +24,7 @@ const handler: Handler = async (event, context) => {
 
   try {
     const data = await resend.emails.send({
-      from: 'onboarding@resend.dev',
+      from: 'Floreria Madison <noreply@floreriamadison.com.ar>',
       to,
       subject,
       html,
