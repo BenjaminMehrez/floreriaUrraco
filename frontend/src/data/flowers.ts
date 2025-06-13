@@ -1,27 +1,45 @@
 export const bestFlowers = [
   {
     id: 1,
-    name: 'Rosas',
-    price: 30000,
-    image: '/img1.jpg',
+    name: 'Gerberas',
+    price: 54000,
+    image: '/img1.jpeg',
   },
   {
     id: 2,
-    name: 'Rosas',
-    price: 30000,
-    image: '/img2.jpg',
+    name: 'Tulipan',
+    price: 36000,
+    image: '/img2.jpeg',
   },
   {
     id: 3,
-    name: 'Rosas',
-    price: 30000,
-    image: '/img3.jpg',
+    name: 'Tulipan x6',
+    price: 72000,
+    image: '/img3.jpeg',
   },
   {
     id: 4,
+    name: 'Girasol',
+    price: 89000,
+    image: '/img4.jpeg',
+  },
+  {
+    id: 5,
+    name: 'Lilium',
+    price: 54000,
+    image: '/img5.jpeg',
+  },
+  {
+    id: 6,
+    name: 'Lilium XL',
+    price: 72000,
+    image: '/img6.jpeg',
+  },
+  {
+    id: 7,
     name: 'Rosas',
-    price: 30000,
-    image: '/img4.jpg',
+    price: 65000,
+    image: '/img7.jpeg',
   }
 ]
 
@@ -29,7 +47,8 @@ export const categories = [
   { name: "Casamientos", id: "casamientos",},
   { name: "Graduaciones", id: "graduaciones",},
   { name: "Aniversarios", id: "aniversarios",},
-  { name: "San Valentín", id: "sanValentin",},
+  { name: "San Valentín", id: "sanValentin", },
+  { name: "Funebres", id: "funebres", },
 ];
 
 export const flowersByCategory = {
@@ -55,6 +74,15 @@ export const flowersByCategory = {
     { name: "Corazón en Flor", price: 60000, img: "/valentine1.jpeg" },
     { name: "Pasión Pétalo", price: 60000, img: "/valentine2.jpeg" },
     { name: "Rosa Eterna", price: 60000, img: "/valentine3.jpeg" },
-    { name: "Amor Floral", price: 60000, img: "/valentine4.jpeg" },
+  ],
+  funebres: [
+    { name: "Cruz Funebre", price: 60000, img: "/funebre1.jpeg" },
+    { name: "Cruz Funebre", price: 60000, img: "/funebre2.jpeg" },
+    { name: "Cruz Funebre", price: 60000, img: "/funebre3.jpeg" },
+    { name: "Cruz Funebre", price: 60000, img: "/funebre4.jpeg" },
+    { name: "Cruz Funebre", price: 60000, img: "/funebre5.jpeg" },
+    { name: "Ambientacion", price: 60000, img: "/funebre6.jpeg" },
+    { name: "Corona Funebre", price: 60000, img: "/funebre7.jpeg" },
+    { name: "Corona Funebre", price: 60000, img: "/funebre8.jpeg" },
   ],
 };
