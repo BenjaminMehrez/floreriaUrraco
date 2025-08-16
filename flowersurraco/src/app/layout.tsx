@@ -1,0 +1,124 @@
+import type { Metadata } from "next";
+import { Lora } from 'next/font/google'
+import "./globals.css";
+
+const lora = Lora({
+  subsets: ['latin'],
+  weight: ['400','500','600','700']
+})
+
+export const metadata: Metadata = {
+  title: {
+    default: 'Florería Madison | Ramos y Flores a Domicilio en Mendoza',
+    template: '%s - Florería Madison | Ramos y Flores a Domicilio en Mendoza'
+  },
+  description:
+    'En Florería Madison ofrecemos ramos personalizados y flores frescas con entrega a domicilio en Mendoza. Ideal para cumpleaños, aniversarios y ocasiones especiales.',
+  keywords: [
+    'floreria Mendoza',
+    'flores a domicilio Mendoza',
+    'ramos de flores',
+    'regalar flores',
+    'florería en Godoy Cruz',
+    'ramos personalizados',
+    'flores mendoza'
+  ],
+  robots: 'index, follow',
+  metadataBase: new URL('https://floreriamadison.com.ar'),
+  openGraph: {
+    title: 'Florería Madison | Envío de Flores en Mendoza',
+    description:
+      'Regalá flores frescas con entrega el mismo día en Mendoza. Ramos únicos, hechos con amor.',
+    url: 'https://floreriamadison.com.ar',
+    siteName: 'Florería Madison',
+    images: [
+      {
+        url: 'https://floreriamadison.com.ar/ramo.png',
+        width: 1200,
+        height: 630,
+        alt: 'Ramo de flores',
+      },
+    ],
+    type: 'website',
+    locale: 'es_AR',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Florería Madison | Ramos a Domicilio en Mendoza',
+    description:
+      'Ramos de flores frescas y personalizados. Envío rápido en Mendoza.',
+    images: ['https://floreriamadison.com.ar/ramo.png'],
+  },
+  icons: {
+    icon: '/favicon.ico',
+  },
+  alternates: {
+    canonical: 'https://floreriamadison.com.ar',
+    languages: {
+      'es-AR': 'https://floreriamadison.com.ar',
+    },
+  },
+  other: {
+    'theme-color': '#ffffff',
+  },
+};
+
+export default function RootLayout({
+  children,
+}: Readonly<{
+  children: React.ReactNode;
+}>) {
+  return (
+    <html lang="es" className="scroll-smooth">
+      <head>
+        <link
+          rel="preload"
+          as="image"
+          href="/bannerimg.avif"
+          type="image/avif"
+        />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link
+          rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossOrigin="anonymous"
+        />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap"
+          rel="stylesheet"
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              '@context': 'https://schema.org',
+              '@type': 'Florist',
+              name: 'Florería Madison',
+              image: 'https://floreriamadison.com.ar/ramo.png',
+              url: 'https://floreriamadison.com.ar',
+              address: {
+                '@type': 'PostalAddress',
+                streetAddress: 'Pascual Segura 1898',
+                addressLocality: 'Mendoza',
+                postalCode: '5501',
+                addressCountry: 'AR',
+              },
+              telephone: '+54 9 261 123-4567',
+              openingHours: 'Mo-Sa 09:00-18:00',
+              priceRange: '$$',
+              sameAs: [
+                'https://www.instagram.com/floreriamadison',
+                'https://www.facebook.com/floreriamadison',
+              ],
+            }),
+          }}
+        />
+      </head>
+      <body
+        className={`${lora.className}`}
+      >
+        {children}
+      </body>
+    </html>
+  );
+}

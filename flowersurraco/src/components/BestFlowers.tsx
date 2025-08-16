@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { bestFlowers } from "../data/flowers";
 
 function BestFlowers() {
@@ -11,14 +12,15 @@ function BestFlowers() {
             </h1>
             <div className="mx-auto w-1/4 h-1 bg-primary mb-4" />
           </div>
-          <p className="mt-2 text-lg text-center">
+          <p className="mt-2 text-lg fin text-center">
             Elegimos los ramos más bellos y delicados para sorprender en cada
             ocasión.
           </p>
         </div>
         <div className="flex justify-center w-full flex-wrap gap-10 mb-5">
           {bestFlowers.map((flower) => (
-            <div
+            <Link
+              href={`/${flower.id}`}
               key={flower.id}
               className={`group relative bg-cover bg-center h-[400px] w-[280px] rounded-lg`}
               style={{ backgroundImage: `url(${flower.image})` }}
@@ -41,7 +43,7 @@ function BestFlowers() {
                   </div>
                 </div>
               </div>
-            </div>
+            </Link>
           ))}
         </div>
       </div>

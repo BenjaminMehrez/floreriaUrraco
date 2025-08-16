@@ -3,42 +3,49 @@ export const bestFlowers = [
     id: 1,
     name: 'Gerberas',
     price: 54000,
+    description: 'Essto est una descriiption',
     image: '/img1.jpeg',
   },
   {
     id: 2,
     name: 'Tulipan',
     price: 36000,
+    description: 'Essto est una descriiption',
     image: '/img2.jpeg',
   },
   {
     id: 3,
     name: 'Tulipan x6',
     price: 72000,
+    description: 'Essto est una descriiption',
     image: '/img3.jpeg',
   },
   {
     id: 4,
     name: 'Girasol',
     price: 89000,
+    description: 'Essto est una descriiption',
     image: '/img4.jpeg',
   },
   {
     id: 5,
     name: 'Lilium',
     price: 54000,
+    description: 'Essto est una descriiption',
     image: '/img5.jpeg',
   },
   {
     id: 6,
     name: 'Lilium XL',
     price: 72000,
+    description: 'Essto est una descriiption',
     image: '/img6.jpeg',
   },
   {
     id: 7,
     name: 'Rosas',
     price: 65000,
+    description: 'Essto est una descriiption',
     image: '/img7.jpeg',
   }
 ]
@@ -71,8 +78,7 @@ export const flowersByCategory = {
     { name: "Amor Profundo", price: 60000, img: "/anniversary4.jpeg" },
   ],
   sanValentin: [
-    { name: "Corazón en Flor", price: 60000, img: "/valentine1.jpeg" },
-    { name: "Pasión Pétalo", price: 60000, img: "/valentine2.jpeg" },
+    { name: "Pasión Pétalo", price: 60000, img: "/anniversary1.jpeg" },
     { name: "Rosa Eterna", price: 60000, img: "/valentine3.jpeg" },
   ],
   funebres: [

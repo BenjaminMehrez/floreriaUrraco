@@ -1,6 +1,8 @@
+'use client'
+
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { categories, flowersByCategory } from "@/data/flowers";
+import { categories, flowersByCategory } from "@/src/data/flowers";
 
 function Flowers() {
   const [activeCategory, setActiveCategory] = useState("casamientos");

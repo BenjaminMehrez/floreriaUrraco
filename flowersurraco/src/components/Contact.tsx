@@ -1,4 +1,6 @@
-import {  Link } from "react-router-dom";
+'use client'
+
+import Link from "next/link";
 import { useForm } from "react-hook-form";
 import { useState } from "react";
 import { Toaster, toast } from "sonner";
@@ -118,7 +120,7 @@ function Contact() {
                 Pascual Segura 1898, M5501 Godoy Cruz, Mendoza
               </p>
               <Link
-                to={"https://maps.app.goo.gl/tAHmgDU1NnLbVA716"}
+                href={"https://maps.app.goo.gl/tAHmgDU1NnLbVA716"}
                 target="_blank"
                 className="mt-2 block font-medium hover:underline text-blue-500"
               >
@@ -130,7 +132,7 @@ function Contact() {
                 EMAIL
               </h2>
               <a className="text-indigo-500 leading-relaxed">
-                floreriamadison@email.com
+                floreriamadison@gmail.com
               </a>
               <h2 className="title-font font-semibold text-gray-900 tracking-widest text-xs mt-4">
                 PHONE

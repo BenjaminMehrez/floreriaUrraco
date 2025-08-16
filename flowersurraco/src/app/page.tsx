@@ -1,13 +1,14 @@
-import Contact from "@/components/Contact";
-import Banner from "../components/Banner"
+
+import Banner from "../components/Banner";
 import BestFlowers from "../components/BestFlowers";
 import DoOrder from "../components/DoOrder";
+import Flowers from "../components/Flowers";
+import IconWhatsApp from "../components/IconWhatsApp";
+import Testimonials from "../components/Testimonials";
 import Footer from "../components/Footer";
-import IconWhatsApp from "@/components/IconWhatsApp";
-import Testimonials from "@/components/Testimonials";
-import Flowers from "@/components/Flowers";
+import Contact from "../components/Contact";
 
-function Home() {
+export default function Home() {
   return (
     <>
       <Banner />
@@ -21,5 +22,3 @@ function Home() {
     </>
   );
 }
-
-export default Home

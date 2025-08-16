@@ -1,3 +1,5 @@
+'use client'
+
 import { ChatBubbleLeftRightIcon } from "@heroicons/react/16/solid";
 import { Flower2, PackageCheckIcon } from "lucide-react";
 
