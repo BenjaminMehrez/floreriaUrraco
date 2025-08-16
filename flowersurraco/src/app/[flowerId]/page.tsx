@@ -3,7 +3,6 @@ import Footer from "@/src/components/Footer"
 import { bestFlowers } from "@/src/data/flowers"
 import Image from "next/image"
 import Link from "next/link"
-import { useParams } from "next/navigation"
 
 
 // type Flower = {
@@ -14,8 +13,7 @@ import { useParams } from "next/navigation"
 //   image: string
 // }
 
-function FlowerDetail() {
-  const { flowerId } = useParams()
+function FlowerDetail({ flowerId }: { flowerId: string }) {
   const flower = bestFlowers.find(f => f.id === Number(flowerId))
 
   return (

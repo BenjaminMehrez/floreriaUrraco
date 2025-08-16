@@ -1,31 +1,35 @@
-import { bestFlowers } from "@/src/data/flowers"
+import { bestFlowers } from "@/src/data/flowers";
 import FlowerDetail from "./page";
-import { Metadata } from "next"
-
+import { Metadata } from "next";
 
 export async function generateMetadata({
   params: { flowerId },
- }: { params: { flowerId: string } }) : Promise<Metadata> {
-  const flower = bestFlowers.find(f => f.id === Number(flowerId))
+}: {
+  params: { flowerId: string };
+}): Promise<Metadata> {
+  const flower = bestFlowers.find((f) => f.id === Number(flowerId));
 
-  const metadata: Metadata = {
-    title: flower?.name,
-    description: flower?.description,
+  return {
+    title: flower?.name || "Flor",
+    description: flower?.description || "Detalle de flor",
     openGraph: {
       images: [
         {
-          url: flower?.image || '',
-        }
-      ]
-    }
+          url: flower?.image || "",
+        },
+      ],
+    },
   };
-  return metadata;
 }
 
-function layout() {
+interface FlowerLayoutProps {
+  params: { flowerId: string };
+}
+
+export default function Layout({ params }: FlowerLayoutProps) {
   return (
-    <FlowerDetail />
-  )
+    <div>
+      <FlowerDetail flowerId={params.flowerId} />
+    </div>
+  );
 }
-
-export default layout
