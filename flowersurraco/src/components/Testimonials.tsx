@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 function Testimonials() {
   return (
     <section className="text-gray-800 bg-orange-100 body-font">
@@ -5,7 +7,9 @@ function Testimonials() {
         <div className="flex flex-wrap -m-4">
           <div className="lg:w-1/3 lg:mb-0 mb-6 p-4">
             <div className="h-full text-center">
-              <img
+              <Image
+                width={100}
+                height={100}
                 alt="testimonial"
                 className="w-20 h-20 mb-8 object-cover object-center rounded-full inline-block border-2 border-gray-200 bg-gray-100"
                 src="https://randomuser.me/api/portraits/women/79.jpg"
@@ -24,7 +28,9 @@ function Testimonials() {
           </div>
           <div className="lg:w-1/3 lg:mb-0 mb-6 p-4">
             <div className="h-full text-center">
-              <img
+              <Image
+                width={100}
+                height={100}
                 alt="testimonial"
                 className="w-20 h-20 mb-8 object-cover object-center rounded-full inline-block border-2 border-gray-200 bg-gray-100"
                 src="https://randomuser.me/api/portraits/men/36.jpg"
@@ -43,7 +49,9 @@ function Testimonials() {
           </div>
           <div className="lg:w-1/3 lg:mb-0 p-4">
             <div className="h-full text-center">
-              <img
+              <Image
+              width={100}
+                height={100}
                 alt="testimonial"
                 className="w-20 h-20 mb-8 object-cover object-center rounded-full inline-block border-2 border-gray-200 bg-gray-100"
                 src="https://randomuser.me/api/portraits/women/11.jpg"

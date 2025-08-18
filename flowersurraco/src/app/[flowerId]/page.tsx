@@ -1,19 +1,35 @@
-'use client'
 import Footer from "@/src/components/Footer"
 import { bestFlowers } from "@/src/data/flowers"
+import { Metadata } from "next"
 import Image from "next/image"
 import Link from "next/link"
 
+type tParams = Promise<{ flowerId: string[] }>;
 
-// type Flower = {
-//   id: number,
-//   name: string
-//   price: number
-//   description: string
-//   image: string
-// }
 
-function FlowerDetail({ flowerId }: { flowerId: string }) {
+export async function generateMetadata({
+  params
+}: {
+  params: tParams;
+}): Promise<Metadata> {
+  const { flowerId } = await params
+  const flower = bestFlowers.find(f => f.id === Number(flowerId))
+
+  return {
+    title: flower?.name || "Flor",
+    description: flower?.description || "Detalle de flor",
+    openGraph: {
+      images: [
+        {
+          url: flower?.image || "",
+        },
+      ],
+    },
+  };
+}
+
+async function FlowerDetail({ params }: { params: tParams }) {
+  const { flowerId } = await params
   const flower = bestFlowers.find(f => f.id === Number(flowerId))
 
   return (
@@ -28,7 +44,7 @@ function FlowerDetail({ flowerId }: { flowerId: string }) {
                 alt={flower?.name || ''}
                 src={flower?.image || ''}
                 fill
-                className="object-cover object-center rounded"
+                className="object-cover object-center rounded" 
               />
             )}
           </div>

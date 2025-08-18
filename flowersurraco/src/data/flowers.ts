@@ -1,3 +1,12 @@
+type FlowerProps = {
+  name: string;
+  img: string;
+  price: number;
+};
+
+export type FlowerCategory = "casamientos" | "graduaciones" | "aniversarios" | "sanValentin" | "funebres";
+
+
 export const bestFlowers = [
   {
     id: 1,
@@ -58,7 +67,7 @@ export const categories = [
   { name: "Funebres", id: "funebres", },
 ];
 
-export const flowersByCategory = {
+export const flowersByCategory: Record<FlowerCategory, FlowerProps[]> = {
   casamientos: [
     { name: "Ramo Elegante", price: 60000, img: "/wedding1.jpeg" },
     { name: "Blanco Puro", price: 60000, img: "/wedding2.jpeg" },

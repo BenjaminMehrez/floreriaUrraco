@@ -1,8 +1,14 @@
 'use client'
-
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { categories, flowersByCategory } from "@/src/data/flowers";
+import { categories, FlowerCategory, flowersByCategory } from "@/src/data/flowers";
+
+type FlowerProps = {
+  name: string;
+  img: string;
+  price: number;
+};
+
 
 function Flowers() {
   const [activeCategory, setActiveCategory] = useState("casamientos");
@@ -48,14 +54,14 @@ function Flowers() {
             transition={{ duration: 0.2 }}
             className="flex justify-center flex-wrap gap-10 w-full mb-5"
           >
-            {(flowersByCategory as { [key: string]: any })[activeCategory]?.map(
-              (flower: any, i: number) => (
+            {flowersByCategory[activeCategory as FlowerCategory]?.map(
+              (flower: FlowerProps, i: number) => (
                 <motion.div
                   key={i}
                   className={`group relative bg-cover bg-center h-[400px] w-[280px] rounded-lg`}
                   initial={{ opacity: 0, scale: 0.9 }}
                   animate={{ opacity: 1, scale: 1 }}
-                  transition={{ delay: flower.id * 0.05, duration: 0.3 }}
+                  transition={{ delay: i * 0.05, duration: 0.3 }}
                   style={{ backgroundImage: `url(${flower.img})` }}
                 >
                   <div className="absolute inset-0 bg-transparent from-black/100 via-transparent lg:from-black/0 lg:group-hover:from-black/100 bg-gradient-to-t rounded-lg transition duration-300"></div>
