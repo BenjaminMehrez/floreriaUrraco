@@ -33,7 +33,7 @@ export const metadata: Metadata = {
     siteName: 'Florería Madison',
     images: [
       {
-        url: 'https://floreriamadison.com.ar/ramo.png',
+        url: 'https://floreriamadison.com.ar/favicon.ico',
         width: 1200,
         height: 630,
         alt: 'Ramo de flores',
@@ -47,7 +47,7 @@ export const metadata: Metadata = {
     title: 'Florería Madison | Ramos a Domicilio en Mendoza',
     description:
       'Ramos de flores frescas y personalizados. Envío rápido en Mendoza.',
-    images: ['https://floreriamadison.com.ar/ramo.png'],
+    images: ['https://floreriamadison.com.ar/favicon.ico'],
   },
   icons: {
     icon: '/favicon.ico',
@@ -90,7 +90,7 @@ export default function RootLayout({
               '@context': 'https://schema.org',
               '@type': 'Florist',
               name: 'Florería Madison',
-              image: 'https://floreriamadison.com.ar/ramo.png',
+              image: 'https://floreriamadison.com.ar/favicon.ico',
               url: 'https://floreriamadison.com.ar',
               address: {
                 '@type': 'PostalAddress',
