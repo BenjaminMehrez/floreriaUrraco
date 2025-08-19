@@ -3,6 +3,7 @@ import { bestFlowers } from "@/src/data/flowers"
 import { Metadata } from "next"
 import Image from "next/image"
 import Link from "next/link"
+import NotFoundPage from "../not-found"
 
 type tParams = Promise<{ flowerId: string[] }>;
 
@@ -32,17 +33,19 @@ async function FlowerDetail({ params }: { params: tParams }) {
   const { flowerId } = await params
   const flower = bestFlowers.find(f => f.id === Number(flowerId))
 
+  if (!flower) return NotFoundPage()
+
   return (
     <div className="bg-orange-100 text-gray-600">
       <div className="container px-5 pt-10 mx-auto max-w-7xl">
         <Link href={'/'} className="font-semibold text-lg sm:text-xl cursor-pointer hover:underline">Volver al inicio</Link>
-        <div className="mt-6 mb-30 lg:mt-10 mx-auto flex flex-col items-center lg:flex-row bg-white rounded-lg max-w-[400px] lg:max-w-[1000px]">
+        <div className="my-12 lg:my-16 lg:mb-40 mx-auto flex flex-col items-center lg:flex-row bg-white rounded-lg max-w-[400px] lg:max-w-[1000px]">
 
           <div className="relative h-120 md:h-140 w-full aspect-[4/3] sm:max-w-[400px] md:max-w-[500px]">
             {flower?.image && (
               <Image
-                alt={flower?.name || ''}
-                src={flower?.image || ''}
+                alt={flower?.name}
+                src={flower?.image}
                 fill
                 className="object-cover object-center rounded" 
               />
