@@ -1,4 +1,3 @@
-import { MetadataRoute } from "next";
 import { bestFlowers } from "../data/flowers";
 
 export default async function sitemap() {

@@ -5,7 +5,7 @@ import Image from "next/image"
 import Link from "next/link"
 import NotFoundPage from "../not-found"
 
-type tParams = Promise<{ flowerId: string[] }>;
+type tParams = Promise<{ id: string[] }>;
 
 
 export async function generateMetadata({
@@ -13,8 +13,8 @@ export async function generateMetadata({
 }: {
   params: tParams;
 }): Promise<Metadata> {
-  const { flowerId } = await params
-  const flower = bestFlowers.find(f => f.id === Number(flowerId))
+  const { id } = await params
+  const flower = bestFlowers.find(f => f.id === Number(id))
 
   return {
     title: flower?.name || "Flor",
@@ -29,9 +29,16 @@ export async function generateMetadata({
   };
 }
 
+export async function generateStaticParams() {
+  return bestFlowers.map((flower) => ({
+    id: flower.id.toString(),
+  }))
+  
+}
+
 async function FlowerDetail({ params }: { params: tParams }) {
-  const { flowerId } = await params
-  const flower = bestFlowers.find(f => f.id === Number(flowerId))
+  const { id } = await params
+  const flower = bestFlowers.find(f => f.id === Number(id))
 
   if (!flower) return NotFoundPage()
 
