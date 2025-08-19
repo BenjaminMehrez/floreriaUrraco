@@ -4,7 +4,7 @@ import "./globals.css";
 
 const lora = Lora({
   subsets: ['latin'],
-  weight: ['400','500','600','700']
+  weight: ['400', '500', '600', '700']
 })
 
 export const metadata: Metadata = {
@@ -24,30 +24,31 @@ export const metadata: Metadata = {
     'flores mendoza'
   ],
   robots: 'index, follow',
-  metadataBase: new URL('https://floreriamadison.com.ar'),
+  metadataBase: new URL(process.env.URL || 'https://www.floreriamadison.com.ar'),
   openGraph: {
+    type: 'website',
+    locale: 'es_AR',
     title: 'Florería Madison | Envío de Flores en Mendoza',
     description:
       'Regalá flores frescas con entrega el mismo día en Mendoza. Ramos únicos, hechos con amor.',
-    url: 'https://floreriamadison.com.ar',
-    siteName: 'Florería Madison',
+    url: process.env.URL || 'https://www.floreriamadison.com.ar',
+    siteName: 'Floreria Madison',
     images: [
       {
-        url: 'https://floreriamadison.com.ar/favicon.ico',
+        url: 'https://floreriamadison.com.ar/bannerimg.avif',
         width: 1200,
         height: 630,
         alt: 'Ramo de flores',
+        type: 'image/avif',
       },
     ],
-    type: 'website',
-    locale: 'es_AR',
   },
   twitter: {
     card: 'summary_large_image',
     title: 'Florería Madison | Ramos a Domicilio en Mendoza',
     description:
       'Ramos de flores frescas y personalizados. Envío rápido en Mendoza.',
-    images: ['https://floreriamadison.com.ar/favicon.ico'],
+    images: ['https://floreriamadison.com.ar/bannerimg.avif'],
   },
   icons: {
     icon: '/favicon.ico',
