@@ -12,7 +12,7 @@ function Testimonials() {
                 height={100}
                 alt="testimonial"
                 className="w-20 h-20 mb-8 object-cover object-center rounded-full inline-block border-2 border-gray-200 bg-gray-100"
-                src="https://randomuser.me/api/portraits/women/79.jpg"
+                src="/imgtesti.jpg"
               />
               <p className="leading-relaxed">
                 El lugar es un verdader vergel, tiene mucha variedad de plantas
@@ -33,7 +33,7 @@ function Testimonials() {
                 height={100}
                 alt="testimonial"
                 className="w-20 h-20 mb-8 object-cover object-center rounded-full inline-block border-2 border-gray-200 bg-gray-100"
-                src="https://randomuser.me/api/portraits/men/36.jpg"
+                src="/imgtesti2.jpg"
               />
               <p className="leading-relaxed">
                 Muy lindo vivero ubicado en Godoy Cruz, tiene mucha variedad de
@@ -50,11 +50,11 @@ function Testimonials() {
           <div className="lg:w-1/3 lg:mb-0 p-4">
             <div className="h-full text-center">
               <Image
-              width={100}
+                width={100}
                 height={100}
                 alt="testimonial"
                 className="w-20 h-20 mb-8 object-cover object-center rounded-full inline-block border-2 border-gray-200 bg-gray-100"
-                src="https://randomuser.me/api/portraits/women/11.jpg"
+                src="/imgtesti3.jpg"
               />
               <p className="leading-relaxed">
                 En realidad fuimos por pasta cicatrisante (luego de poda) y nos

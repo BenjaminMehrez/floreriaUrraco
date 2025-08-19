@@ -1,12 +1,11 @@
 'use client'
-
 import Link from "next/link";
 import { useForm } from "react-hook-form";
 import { useState } from "react";
 import { Toaster, toast } from "sonner";
 
 type FormContact = {
-  name: string;
+  full_name: string;
   email: string;
   message: string;
 };
@@ -21,69 +20,13 @@ function Contact() {
   const [loading, setLoading] = useState(false);
 
   const sendEmail = async (body: FormContact) => {
-    const email_html_content = `
-    <html lang="es">
-    <head>
-      <meta charset="UTF-8" />
-      <title>Nuevo mensaje de contacto - Florería Aroma Natural</title>
-    </head>
-    <body style="margin:0; padding:0; font-family: 'Segoe UI', sans-serif; background-color: #faf8f6;">
-      <table width="100%" cellpadding="0" cellspacing="0" border="0"
-        style="max-width: 600px; margin: auto; background-color: #ffffff; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
-        <tr>
-          <td style="padding: 30px 20px 10px; text-align: center; background-color: #f3e9e5;">
-            <img src="https://floreria-urraco.netlify.app/ramo.png" alt="Logo de Florería"
-              style="max-width: 160px; margin-bottom: 10px;" />
-          </td>
-        </tr>
-        <tr>
-          <td style="padding: 0 30px 30px;">
-            <p style="font-size: 16px; color: #444; line-height: 1.6; margin-top: 20px;">
-              Has recibido un nuevo mensaje a través del formulario de contacto de la web de <strong>Florería Madison</strong>.
-            </p>
-
-            <table cellpadding="0" cellspacing="0" border="0" width="100%" style="margin-top: 20px;">
-              <tr>
-                <td style="padding: 8px 0;"><strong style="color: #333;">Nombre:</strong> ${body.name}</td>
-              </tr>
-              <tr>
-                <td style="padding: 8px 0;"><strong style="color: #333;">Correo electrónico:</strong> ${body.email}</td>
-              </tr>
-            </table>
-
-            <p style="font-size: 16px; color: #444; margin-top: 30px;"><strong>Mensaje:</strong></p>
-            <blockquote
-              style="background-color: #fff7f3; padding: 20px; border-left: 4px solid #c46d5e; margin: 20px 0; font-size: 16px; color: #333;">
-              “${body.message}”
-            </blockquote>
-
-            <p style="font-size: 14px; color: #999; text-align: center; margin-top: 40px;">
-              Por favor, respondé al mensaje lo antes posible para mantener una excelente atención al cliente 🌸
-            </p>
-          </td>
-        </tr>
-        <tr>
-          <td align="center"
-            style="background-color: #f3e9e5; padding: 12px; font-size: 12px; color: #5a3e36; border-radius: 0 0 8px 8px;">
-            © 2025 Florería Madison. Todos los derechos reservados.
-          </td>
-        </tr>
-      </table>
-    </body>
-    </html>
-    `;
-
     try {
       setLoading(true);
-      const res = await fetch("/.netlify/functions/sendEmail", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          to: "floreriamadison@gmail.com",
-          subject: "Nuevo mensaje de Floreria Madison",
-          html: email_html_content,
-        }),
-      });
+      const res = await fetch("http://localhost:3000/api/send", {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(body)
+      })
 
       if (!res.ok) throw new Error("Error al enviar el correo");
       toast.success("Mensaje enviado con exito");
@@ -94,7 +37,7 @@ function Contact() {
     } finally {
       setLoading(false);
     }
-  };
+  }
 
   return (
     <section id="contact" className="text-gray-600 body-font relative">
@@ -158,12 +101,12 @@ function Contact() {
                 required
                 type="text"
                 id="name"
-                {...register("name", { required: true })}
-                name="name"
+                {...register("full_name", { required: true })}
+                name="full_name"
                 className="w-full bg-white rounded border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
               />
-              {errors.name && (
-                <p className="text-red-500 block">{errors.name.message}</p>
+              {errors.full_name && (
+                <p className="text-red-500 block">{errors.full_name.message}</p>
               )}
             </div>
             <div className="relative mb-4">
