@@ -22,7 +22,7 @@ function Contact() {
   const sendEmail = async (body: FormContact) => {
     try {
       setLoading(true);
-      const res = await fetch("https://floreriamadison.com.ar/api/send", {
+      const res = await fetch("/api/send", {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(body)
