@@ -20,7 +20,7 @@ function BestFlowers() {
         <div className="flex justify-center w-full flex-wrap gap-10 mb-5">
           {bestFlowers.map((flower) => (
             <Link
-              href={`best-flowers/${flower.id}`}
+              href={`/${flower.id}`}
               key={flower.id}
               className={`group relative bg-cover bg-center h-[400px] w-[280px] rounded-lg`}
               style={{ backgroundImage: `url(${flower.image})` }}
