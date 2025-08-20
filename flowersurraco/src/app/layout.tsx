@@ -51,7 +51,7 @@ export const metadata: Metadata = {
     images: ['https://floreriamadison.com.ar/bannerimg.avif'],
   },
   icons: {
-    icon: '/ramosvg.svg',
+    icon: '/ramo.png',
   },
   alternates: {
     canonical: 'https://floreriamadison.com.ar',
@@ -79,7 +79,7 @@ export default function RootLayout({
               '@context': 'https://schema.org',
               '@type': 'Florist',
               name: 'Florería Madison',
-              image: 'https://floreriamadison.com.ar/ramosvg.svg',
+              image: 'https://floreriamadison.com.ar/bannerimg.avif',
               url: 'https://floreriamadison.com.ar',
               address: {
                 '@type': 'PostalAddress',
