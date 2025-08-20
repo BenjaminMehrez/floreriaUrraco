@@ -41,7 +41,7 @@ export function EmailTemplate({ full_name, email, message }: EmailTemplateProps)
             }}
           >
             <Img
-              src="https://floreria-urraco.netlify.app/favicon.ico"
+              src="https://floreria-urraco.netlify.app/ramosvg.svg"
               alt="Logo de Florería"
               width="160"
               style={{ marginBottom: "10px" }}
