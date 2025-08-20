@@ -38,13 +38,14 @@ export function EmailTemplate({ full_name, email, message }: EmailTemplateProps)
               padding: "30px 20px 10px",
               textAlign: "center",
               backgroundColor: "#f3e9e5",
+              margin: "0 auto",
             }}
           >
             <Img
               src="https://www.floreriamadison.com.ar/ramo.png"
               alt="Logo de Florería"
               width="160"
-              style={{ marginBottom: "10px" }}
+              style={{ marginBottom: "10px", display: "block", margin: "0 auto" }}
             />
           </Section>
 
